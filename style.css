@@ -6,6 +6,13 @@ html,body {
 	word-wrap: break-word;
 }
 
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+.w3-lobster {
+    font-family: "Lobster", serif;
+}
+
 #left {
 	position: absolute;
 	left: 0;
@@ -19,8 +26,9 @@ html,body {
 	margin-top: 3%;
 	margin-left: 10%;
 	justify-content: center;
-	font-size: 20px;
+	font-size: 30px;
 }
+
 #dot {
 	color: #ef473a;
 	font-size: 40px;
@@ -31,20 +39,20 @@ html,body {
 	text-shadow: 1px 1px 2px #ef473a, 0 0 25px #ef473a, 0 0 5px #cb2d3e;
 	line-height: 1;
 	font-size: 60px;
-	font-family: 'Poppins', sans-serif;
 }
 
 #content {
 	margin-left: 10%;
 	color: #EEEEEE;
 	line-height: 1.6;
-	font-size: 20px;
-	font-family: 'Open Sans', sans-serif;
-	margin-top: 35%;
+	font-size: 25px;
+	font-weight: normal;
+	margin-top: 32%;
 	margin-right: 16%;
 }
 
 .btn {
+	border:none;
 	background-color:  #ef473a;
 	border-color: white;
 	font-size: 20px;
@@ -53,6 +61,9 @@ html,body {
 .btn:hover{
 	background-color: white;
 	color: #cb2d3e;
+}
+.btn:focus{
+	box-shadow: none;
 }
 
 
@@ -88,7 +99,7 @@ a {
 
 #stay-in-touch {
 	font-size: 18px;
-	font-family: sans-serif;
+	font-family: "Lobster", serif;
 	color: #EEEEEE;
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -116,7 +127,7 @@ a {
 	font-size: 40px;
 	text-align: center;
 	font-weight: bold;
-	font-family: sans-serif;
+	font-family: "Allerta Stencil", Sans-serif;
 	height: 120px;
 	width: 120px;
 	border-radius: 50%;
@@ -141,7 +152,8 @@ a {
 .modal-body a {
 	color: #EEEEEE;
 	text-decoration: none;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Allerta Stencil", Sans-serif;
+	font-size: 20px;
 }
 .modal-body a:hover {
 	text-decoration: none;
@@ -158,8 +170,9 @@ a {
 }
 
 #exampleModalLabel {
-	font-family: sans-serif;
+	font-family: "Lobster", serif;
 	font-weight: bolder;
+	font-size: 25px;
 }
 
 .modal-body {
@@ -168,4 +181,9 @@ a {
 
 .x {
 	color: white;
+}
+
+.modal-backdrop{
+	/*background: linear-gradient(to right, #cb2d3e, #ef473a); */
+    opacity: 0.97 !important;
 }
