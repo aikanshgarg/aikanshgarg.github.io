@@ -24,7 +24,7 @@ var x = setInterval(function () {
 
 
      // If the count down is over, write some text 
-    if (distance < 0) {
+    if (diff < 0) {
         
     document.getElementById("days").innerHTML = "00";
     document.getElementById("hrs").innerHTML = "00";

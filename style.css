@@ -44,6 +44,18 @@ html,body {
 	margin-right: 16%;
 }
 
+.btn {
+	background-color:  #ef473a;
+	border-color: white;
+	font-size: 20px;
+	padding: 2px;
+}
+.btn:hover{
+	background-color: white;
+	color: #cb2d3e;
+}
+
+
 #social-icons {
 	position: absolute;
 	margin-left: 4%;
@@ -52,18 +64,9 @@ html,body {
 
 ul {
 	list-style: none;
-	
 	display: flex;
 	justify-content: center;
 	margin-top: 30%;
-}
-
-#projects-link {
-	color: white;
-	cursor: pointer;
-}
-#projects-link:hover{
-	color: #ef473a;
 }
 
 li {
@@ -80,6 +83,7 @@ a {
 }
 .fa:hover {
 	color: white;
+	text-decoration: none;
 }
 
 #stay-in-touch {
@@ -130,5 +134,38 @@ a {
 }
 
 .center-align-time {
-	margin-top: 25px;
+	margin-top: 13px;
+}
+
+/*--------------------------------------------------------------------*/
+.modal-body a {
+	color: #EEEEEE;
+	text-decoration: none;
+	font-family: "Times New Roman", Times, serif;
+}
+.modal-body a:hover {
+	text-decoration: none;
+	color: #ef473a;
+}
+
+.modal-header {
+	background: linear-gradient(to right, #cb2d3e, #ef473a); 
+	font-style: italic;
+}
+
+#exampleModal:focus {
+	border:none;
+}
+
+#exampleModalLabel {
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+
+.modal-body {
+	background-color: #131418;
+}
+
+.x {
+	color: white;
 }
