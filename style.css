@@ -38,13 +38,34 @@ html, body{
 	/*display: inline-flex;*/
 	color: #ef473a;
 	font-size: 35px;
+	display: inline-flex;
 }
 
+
 #title {
-	color: #FAFAFA;
-	text-shadow: 1px 1px 2px #ef473a, 0 0 25px #ef473a, 0 0 5px #cb2d3e;
+	color: #ef473a;
+	/*text-shadow: 1px 1px 2px #ef473a, 0 0 25px #ef473a, 0 0 5px #cb2d3e;*/
 	line-height: 1;
 	font-size: 50px;
+	display: inline-block;
+    padding-right: 5px;
+	overflow: hidden;
+	border-right: .15em solid #ef473a;
+	white-space: nowrap;
+	margin: 0 auto;
+	animation: typing 6.5s steps(30, end),
+    blink-caret .5s steps(1, end) infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 90% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ef473a }
 }
 
 #content {
