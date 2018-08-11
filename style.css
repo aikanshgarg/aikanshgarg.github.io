@@ -201,7 +201,7 @@ a {
 
 #exampleModalLabel {
 	font-family: "Lobster", serif;
-	font-weight: bolder;
+	/*font-weight: bolder;*/
 	font-size: 25px;
 }
 
