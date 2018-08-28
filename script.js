@@ -1,6 +1,6 @@
 // count-down timer logic
 
-const completionDate = new Date("August 31, 2018 23:59:59").getTime();
+const completionDate = new Date("March 2, 2019 23:59:59").getTime();
 
 // setInterval after every 1000ms(1s) to update the count like a clock, every one second
 var x = setInterval(function () {
