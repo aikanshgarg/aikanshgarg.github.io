@@ -90,8 +90,10 @@ section {
 }
 
 #pretty-text{
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,.7);
 	padding: 25px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+  border-radius: 2px;
 }
 .btn-large {
 	text-transform: none;
@@ -108,25 +110,25 @@ section {
 /*-------------------------------------------------------------------------ABOUT ME---------------------------------------------------------------------------------------*/
 #lefty {
 	text-align: left;
-	color: white;
+	color: #fff;
 	background-color: #111;
 }
 #info {
-	 padding-top: 20%;
-   padding-bottom: 20%;
+	 padding-top: 10%;
+   padding-bottom: 10%;
 }
 
 #righty {
 	background-color: rgba(244, 67, 54);
 }
 #pic-box {
-	  padding-top: 22%;
+	  padding-top: 14%;
     padding-bottom: 20%;
     margin-left: 10%; 
     
 }
 .good-pic {
-  border-radius: 3px;
+  border-radius: 2px;
 }
 #box-out {
 	  height: 280px;
@@ -136,18 +138,14 @@ section {
     background-size: contain;
     /*mix-blend-mode: screen;*/ /*makes color blend with bg color*/
     transition: all 0.1s ease-out;
-    /*cursor: none;*/
-    box-shadow: 0px 5px 20px #111;
-    opacity: 0.8;
-    transition: all .3s ease;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    transition: all .2s ease;
 
 }
 #box-out:hover {
-	/*mix-blend-mode: normal;
-	transform: scale(1.1);
-	box-shadow: 0px 5px 20px 0px #111;*/
   transform: rotate(5deg) scale(1.1);
-  cursor: none;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
 
@@ -176,7 +174,7 @@ section {
   .splitter {
    background-color: #111;
   /*background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);*/
-  background-image: -webkit-linear-gradient(235deg, #111 50%, rgba(244, 67, 54) 50%)
+  background-image: -webkit-linear-gradient(235deg, #111 50%, rgb(244, 67, 54) 50%)
   }
   #contact {
     height: 60vh;
@@ -185,9 +183,9 @@ section {
 @media only screen and (orientation: portrait) {
   #pretty-text {
   	padding: 30px;
-  	padding-top: 10px;
-  	padding-bottom: 10px;
-  	margin-top: 30px;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	margin-top: 20%;
   }
   #pic-box{
   	margin-left: 6%;
@@ -257,6 +255,8 @@ section {
 	  margin-top: 40px;
     margin-bottom: 40px;
     cursor: all-scroll;
+    border-radius: 2px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
 }
 .indicators{
  	right: 27%;
@@ -273,9 +273,8 @@ section {
 
 /*---------------------SCREEN SPLIT-------*/  
   .splitter {
-     background-color: #111;
-    /*background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);*/
-    background-image: -webkit-linear-gradient(232deg, #111 50%, rgba(244, 67, 54) 50%);
+     background-color: rgb(244, 67, 54);
+    background-image: -webkit-linear-gradient(232deg, #111 50%, rgb(244, 67, 54) 50%);
   }	
 
 
@@ -285,10 +284,12 @@ section {
 }
 
 .social-icon {
-  opacity: 1;
+  background: rgb(244, 67, 54);
+  transition: all .1s;
 }
 .social-icon:hover {
-  opacity: 0.8;
+  opacity: 1;
+  background: transparent;
   transform: scale(1.2);
 }
 .btn-small {
