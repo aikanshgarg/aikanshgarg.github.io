@@ -213,7 +213,9 @@ section {
 /*FOR IPHONE-5*/
 @media only screen and (max-height: 670px) {
   #pretty-text {
-  	padding: 0px;
+  	padding: 2rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
   	margin-top: 30px;
   }
   h1{
