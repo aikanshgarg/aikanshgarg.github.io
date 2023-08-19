@@ -1,0 +1,387 @@
+#home {
+  position: relative;
+  background: url("../../assets/bgIMG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  // background: #150c21;
+
+  // disable the default padding styles
+  .app__wrapper {
+    padding: 0;
+
+    .copyright {
+      display: none;
+    }
+  }
+}
+
+.app__header {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+
+  padding: 6rem 2rem 0rem;
+
+  @media screen and (min-width: 2000px) {
+    padding-top: 8rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 6rem 1rem 2rem;
+  }
+}
+
+.app__header-info {
+  flex: 0.65;
+  // flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+
+  // margin: 0 2rem;
+  margin: 0 6rem 0 1rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    margin: 0 2rem;
+  }
+}
+
+.app__header-badge {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  .badge-cmp,
+  .tag-cmp {
+    padding: 1rem 2rem;
+    background: var(--white-color);
+    border-radius: 15px;
+    flex-direction: row;
+    width: auto;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .tag-cmp {
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 4.5rem;
+    // @media screen and (max-width: 768px) {
+    //   margin-left: 7rem;
+    // }
+
+    p {
+      width: 100%;
+      text-transform: uppercase;
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    .refreshIcon {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      padding: 4px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      top: -8px;
+      right: -8px;
+      color: var(--gray-color);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      background: white;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        scale: 1.1;
+        color: var(--secondary-color);
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  span {
+    font-size: 2.8rem;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.wave:hover {
+  // cursor: none;
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  // animation-iteration-count: 4;
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.app__header-circles {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  margin-left: 1rem;
+
+  div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    background: var(--white-color);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  // circles with different height & width
+
+  div:nth-child(1) {
+    width: 95px;
+    height: 95px;
+  }
+
+  div:nth-child(2) {
+    margin: 1rem;
+    width: 130px;
+    height: 130px;
+  }
+
+  div:nth-child(3) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media screen and (min-width: 2000px) {
+    div:nth-child(2) {
+      width: 400px;
+      height: 400px;
+    }
+
+    div:nth-child(3) {
+      width: 170px;
+      height: 170px;
+    }
+
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 0;
+
+    div {
+      margin: 1rem 0;
+    }
+  }
+
+  .circle-cmp {
+    // cursor: none;
+
+    &:hover {
+      transition: 1s ease-out;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      -ms-transition: 1s;
+      -o-transition: 1s;
+      -webkit-transform: rotate(720deg);
+      -moz-transform: rotate(720deg);
+      -o-transform: rotate(720deg);
+      -ms-transform: rotate(720deg);
+      transform: rotate(720deg);
+    }
+  }
+}
+
+.app__header-img {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  .overlay_circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+    // background: radial-gradient(farthest-side at 60% 80%, #733236, transparent);
+    // border-radius: 50%;
+    // height: 500px;
+    // width: 500px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin: 2rem 0;
+  }
+}
+
+$rotationDuration: 20s;
+$hoverDuration: 0.3s;
+
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+
+$textColor: #2b3338;
+// $textColor: #fff;
+
+.link {
+  width: 6rem;
+  height: 6rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  word-spacing: 0.3em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 5rem;
+  margin-right: 1rem;
+
+  &__svg {
+    width: 100%;
+    height: auto;
+    transform-box: fill-box;
+    fill: $textColor;
+    stroke: $textColor;
+    stroke-width: 0.05em;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &__arrow {
+    transform-origin: 50% 50%;
+    stroke-width: 0.075em;
+    transition: transform $hoverDuration / 2 $easeIn;
+
+    .link:hover & {
+      transform: scale(1.1);
+      transition: transform $hoverDuration $easeOut;
+    }
+  }
+
+  &__text {
+    animation: rotateReverse normal infinite $rotationDuration linear;
+    transform-origin: 50% 50%;
+
+    .link:hover & {
+      animation-play-state: paused;
+    }
+  }
+
+  &--alt {
+    font-size: 1.15rem;
+    letter-spacing: 0;
+    word-spacing: 0;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.overview-circle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 8rem;
+  cursor: pointer;
+  position: relative;
+
+  div {
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      top: 0;
+      height: 5.5rem;
+      width: 5.5rem;
+    }
+  }
+}
+
+// .image-transition {
+//   transition: all 0.3s ease; /* Add desired transition properties */
+// }

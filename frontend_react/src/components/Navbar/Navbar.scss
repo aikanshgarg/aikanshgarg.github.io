@@ -1,0 +1,207 @@
+.app__navbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  // background: rgba(255, 255, 255, 0.97);
+
+  // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0);
+
+  position: fixed;
+  z-index: 20;
+}
+
+.resumeBtn {
+  outline: none;
+  box-shadow: 3px 3px 0 0 #f6faff;
+  padding: 0.5rem 0.75rem;
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 200ms;
+  color: var(--gray-color);
+
+  &:hover {
+    outline: none;
+    box-shadow: 3px 3px 0 0 var(--secondary-color);
+    transform: translate(-4px, -4px);
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.resumeMobile {
+  display: block;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    width: auto;
+    height: 2.2rem;
+    border-radius: 10px;
+
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+      height: 40px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1; // this makes the links take up all the remaining space in the container that logo doesn't take
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+
+    flex-direction: column;
+
+    div {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: var(--gray-color);
+      text-decoration: none;
+      flex-direction: column;
+
+      text-transform: uppercase;
+      font-weight: 500;
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    &:hover {
+      div {
+        background: var(--secondary-color);
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: var(--white-color);
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 88%;
+    height: 100vh;
+    margin-right: -5px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background: url("../../assets/bgWhite.png");
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      color: #f6faff;
+      margin: 0.5rem 1rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 500;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    display: none;
+  }
+}

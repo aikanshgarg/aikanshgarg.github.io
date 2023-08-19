@@ -1,0 +1,145 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  width: 100vw;
+  height: 100%;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  overflow: hidden;
+  position: fixed;
+}
+
+.modal {
+  z-index: 100;
+  display: flex;
+  position: absolute;
+  position: fixed;
+  justify-content: flex-end;
+  align-items: center;
+  width: 70vw;
+  height: fit-content;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background: url("../../assets/bgWhite.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #f6faff;
+
+  img {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 84% 16% 70% 30%/24% 88% 12% 76%;
+    transition: all 0.2s;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    width: 100%;
+    height: 38vh;
+    cursor: none;
+    display: block;
+
+    &:hover {
+      border-radius: 200% 0% 100%/53% 62% 38% 47%;
+    }
+  }
+
+  .modal-text {
+    width: 70%;
+    font-size: 1rem;
+    color: #2d3142;
+    padding: 3rem;
+
+    p {
+      margin-top: 1rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: fit-content;
+    width: 95vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 1rem;
+
+    img {
+      height: 28vh;
+    }
+
+    .modal-text {
+      width: auto;
+      padding: 2rem;
+    }
+  }
+}
+
+.modal-close-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  color: #6b7688;
+  font-size: 2rem;
+  transition: all 0.2s;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.closeBtn:hover,
+.closeBtn:focus {
+  cursor: pointer;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.left-side {
+  padding-top: 2rem;
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      margin-top: 1rem;
+      padding: 5px;
+      transition: all 0.2s ease;
+      margin-left: 10px;
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+
+      &:hover {
+        color: #7ce3ff;
+        transition: translateY(-4px);
+      }
+    }
+  }
+}
+
+.highlighted {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: linear-gradient(to top, #7ce3ff 30%, transparent 0);
+}
+
+.modal-links {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 300;
+
+  &:hover {
+    font-weight: 800;
+  }
+}
